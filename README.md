@@ -78,12 +78,12 @@ Instead require it through the package manager.
 
 `lerna add my-pkg-name-foo my-pkg-name-bar --scope=my-pkg-name-baz`
 
-### References
-
-[Monorepos by example](https://codeburst.io/monorepos-by-example-part-1-3a883b49047e)
-
 ### Git
 
 View changes to specific repo
 
 `git log packages/foo`
+
+### References
+
+[Monorepos by example](https://codeburst.io/monorepos-by-example-part-1-3a883b49047e)
