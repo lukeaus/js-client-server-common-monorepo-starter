@@ -11,6 +11,29 @@ JavaScript monorepo starter package using:
 - commitizen
 - husky
 
+## Get Started
+
+Clone this repository
+`git clone https://github.com/lukeaus/js-client-server-common-monorepo-starter`
+
+Change directory into new
+
+`cd js-client-server-common-monorepo-starter`
+
+Remove example packages folder
+
+`rm -rf packages/`
+
+Install
+
+`npm install`
+
+Create a new pacakge
+
+`npx lerna create <name>`
+
+Congratulations - you have a monorepo containing one package.
+
 ## How To Use
 
 Uses Lerna for package management.
