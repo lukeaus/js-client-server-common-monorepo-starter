@@ -16,7 +16,8 @@
     "lint": "eslint .",
     "postinstall": "npm run bootstrap",
     "prebuild": "lerna exec --parallel -- rimraf dist",
-    "build": "lerna exec --parallel -- BABEL_ENV=production babel --copy-files --out-dir dist --config-file ../../.babelrc src"
+    "build": "lerna exec --parallel -- BABEL_ENV=production babel --copy-files --out-dir dist --config-file ../../.babelrc src",
+    "pre-commit:error": "echo-cli 'Could not commit. Fix the problem, then run: npm run commit:retry' && exit 1"
   },
   "config": {
     "commitizen": {
@@ -30,7 +31,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run test || echo-cli 'Try: npm run commit:retry'",
+      "pre-commit": "npm run lint && npm run test || npm run pre-commit:error",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
